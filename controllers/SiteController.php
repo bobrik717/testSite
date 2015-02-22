@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\TestForm;
 
 class SiteController extends Controller
 {
@@ -100,5 +101,14 @@ class SiteController extends Controller
                         'user' => Yii::$app->user,
                     ];
         return $this->render('testView',$pageVars);
+    }
+
+    public function actionTestForm(){
+        $model = new TestForm();
+        if( $model->load(Yii::$app->request->post()) && $model->validate() ){
+            Yii::$app->session->setFlash('success','OK');
+        }
+
+        return $this->render('testForm',['model' => $model]);
     }
 }
