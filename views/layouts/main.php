@@ -49,7 +49,7 @@ AppAsset::register($this);
                         ],
                         [
                             'label' => 'Test Page',
-                            'url' => ['/site/testpage']
+                            'url' => ['/site/test-page']
                         ],
                         Yii::$app->user->isGuest ?
                             [

@@ -94,7 +94,7 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionTestpage()
+    public function actionTestPage()
     {
         $pageVars = [
                         'user' => Yii::$app->user,
