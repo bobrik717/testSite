@@ -55,6 +55,10 @@ AppAsset::register($this);
                             'label' => 'Test Form',
                             'url' => ['/site/test-form']
                         ],
+                        [
+                            'label' => 'Users',
+                            'url' => ['/users/index']
+                        ],
                         Yii::$app->user->isGuest ?
                             [
                                 'label' => 'Login',
