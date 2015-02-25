@@ -59,6 +59,10 @@ AppAsset::register($this);
                             'label' => 'Users',
                             'url' => ['/users/index']
                         ],
+                        [
+                            'label' => 'Posts',
+                            'url' => ['/posts/index']
+                        ],
                         Yii::$app->user->isGuest ?
                             [
                                 'label' => 'Login',
